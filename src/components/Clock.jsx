@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { useWorldTimeAPI } from "../hooks/useTime";
+import { useTime } from "../hooks/useTime";
 import "./Clock.css";
 export function Clock({ timezone }) {
-  const { time, day, dayYear } = useWorldTimeAPI("America/Mexico_City");
+  const { time, day, dayYear } = useTime("America/Mexico_City");
   const [dark, setDark] = useState(false);
   const days = {
     0: "Domingo",
